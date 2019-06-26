@@ -1,0 +1,91 @@
+//variables
+$lime : #7ED321;
+$orange : #F5A623;
+$white: #ffffff;
+$black : #000000;
+$red : #ff0000;
+
+@mixin heading-brand {
+    font-weight: 700;
+    color: $orange;
+}
+
+.heading-brand {
+    @include heading-brand();
+}
+
+h6 {
+    font-size: 16px;
+}
+
+p {
+    font-size: 12px;
+}
+
+th.large-12.horizontal-rule {
+    padding-bottom: 0;
+    .horizontal-rule-line {
+         border-top-color: $orange;
+         border-bottom-color: $orange;
+         border-left-color: $orange;
+         border-right-color: $orange;
+         border-top-style:solid;
+         border-bottom-style:solid;
+         border-left-style:solid;
+         border-right-style:solid;
+    }
+}
+
+.horizontal-rule-line-red {
+    border-top-color: $red;
+    border-bottom-color: $red;
+    border-left-color: $red;
+    border-right-color: $red;
+    border-top-style:solid;
+    border-bottom-style:solid;
+    border-left-style:solid;
+    border-right-style:solid;
+}
+
+#footer-bar,
+#top-bar {
+    background-color: $lime;
+
+    .menu-item, .menu-item a {
+        color: $white;
+        font-size: 10px;
+    }
+
+    #top-socials {
+        //padding-top: 5px;
+        padding-bottom: 0;
+        padding-right: 0;
+
+        a, tweet, forwardtoafriend {
+            display: inline-block;
+            padding-left: 10px;
+        }
+    }
+
+    .pipe {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    @media only screen and (max-width: 596px) {
+        .first {
+            padding-bottom: 0!important;
+        }
+    }
+}
+
+.three-column-content {
+    .editable-content {
+        .heading-brand {
+            font-size: 14px;
+        }
+        p {
+            font-size: 10px;
+        }
+    }
+}
