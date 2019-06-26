@@ -1,13 +1,33 @@
 //variables
-$lime : #7ED321;
+$green : #9CCA3B;
+$grey : #455268;
+
 $orange : #F5A623;
 $white: #ffffff;
 $black : #000000;
 $red : #ff0000;
 
+body,
+table.body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+td,
+th,
+a {
+  color: $grey;
+  font-family:  Arial, Helvetica, sans-serif;
+}
+
 @mixin heading-brand {
     font-weight: 700;
-    color: $orange;
+    color: $grey ;
+    font-size: 18px;
+    text-transform: uppercase;
 }
 
 .heading-brand {
@@ -15,20 +35,39 @@ $red : #ff0000;
 }
 
 h6 {
-    font-size: 16px;
+    font-size: 18px;
+    text-transform: uppercase;
 }
 
 p {
-    font-size: 12px;
+    color: $grey;
+    font-size: 14px;
+    line-height: 180%;
 }
+
+a,
+table.button table td a {
+    color: $green;
+    font-family:  Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: $green;
+    text-decoration: none; }
+    a:hover {
+      color: $grey  }
+    a:active {
+      color: $grey  }
+    a:visited {
+      color: $grey }
 
 th.large-12.horizontal-rule {
     padding-bottom: 0;
     .horizontal-rule-line {
-         border-top-color: $orange;
-         border-bottom-color: $orange;
-         border-left-color: $orange;
-         border-right-color: $orange;
+         border-top-color: $grey ;
+         border-bottom-color: $grey ;
+         border-left-color: $grey ;
+         border-right-color: $grey ;
          border-top-style:solid;
          border-bottom-style:solid;
          border-left-style:solid;
@@ -47,35 +86,41 @@ th.large-12.horizontal-rule {
     border-right-style:solid;
 }
 
-#footer-bar,
 #top-bar {
-    background-color: $lime;
+    background-color: $white;
 
     .menu-item, .menu-item a {
-        color: $white;
+        color: $grey;
         font-size: 10px;
-    }
-
-    #top-socials {
-        //padding-top: 5px;
-        padding-bottom: 0;
-        padding-right: 0;
-
-        a, tweet, forwardtoafriend {
-            display: inline-block;
-            padding-left: 10px;
-        }
-    }
-
-    .pipe {
-        padding-left: 5px;
-        padding-right: 5px;
     }
 
     @media only screen and (max-width: 596px) {
         .first {
             padding-bottom: 0!important;
         }
+    }
+}
+
+#footer-bar {
+    background-color: $grey;
+    .menu-item, .menu-item a {
+        color: $white;
+        font-size: 10px;
+    }
+    .pipe {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    a, tweet, forwardtoafriend {
+        display: inline-block;
+        padding-left: 5px;
+        padding-right: 5px;
+
+        .share-icon {
+            display: inline-block;
+            vertical-align: middle;
+        }   
     }
 }
 
