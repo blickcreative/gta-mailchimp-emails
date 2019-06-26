@@ -99,6 +99,12 @@ th.large-12.horizontal-rule {
             padding-bottom: 0!important;
         }
     }
+
+    @media only screen and (max-width: 596px){
+        table.menu td, table.menu th {
+             display: block !important;
+        }
+    }
 }
 
 #footer-bar {

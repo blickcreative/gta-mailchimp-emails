@@ -76,6 +76,9 @@ th.large-12.horizontal-rule {
   @media only screen and (max-width: 596px) {
     #top-bar .first {
       padding-bottom: 0 !important; } }
+  @media only screen and (max-width: 596px) {
+    #top-bar table.menu td, #top-bar table.menu th {
+      display: block !important; } }
 
 #footer-bar {
   background-color: #455268; }
